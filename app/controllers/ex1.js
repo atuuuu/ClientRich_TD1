@@ -47,5 +47,12 @@ export default class Ex1Controller extends Controller {
       this.info = 'alert-success';
       this.status = 'Note sauvegardée';
     }
+    Ex1Controller.items = this.content;
+  }
+
+  static set items(content) {
+    content.split('\n').forEach((value) => {
+      this.items[this.items.length] = value;
+    });
   }
 }

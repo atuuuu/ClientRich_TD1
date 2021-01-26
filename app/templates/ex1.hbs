@@ -8,9 +8,10 @@
     <div class="alert {{this.note}}">Il vous reste {{this.size}} caractères à saisir.</div>
     <button type="button" {{on "click" this.save}}>Save</button>
     <button type="button" {{on "click" this.clear}}>clear</button>
-  </div>
-  <div class={{this.style}}>
-    <p>{{this.status}}</p>
+    <div class={{this.style}}>
+      <p>{{this.status}}</p>
+    </div>
   </div>
 </div>
 {{outlet}}
+
