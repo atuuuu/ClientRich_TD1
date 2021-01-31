@@ -1,5 +1,6 @@
-{{page-title "Ex1b"}}
+
 <ul class="list-group">
-  {{this.list}}
+  {{#each @model as |test|}}
+  <li class="list-group-item"> {{test.val}} </li>
+  {{/each}}
 </ul>
-{{outlet}}

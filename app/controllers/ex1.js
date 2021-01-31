@@ -50,7 +50,7 @@ export default class Ex1Controller extends Controller {
     Ex1Controller.items = this.content;
   }
 
-  static set items(content) {
+  set items(content) {
     content.split('\n').forEach((value) => {
       this.items[this.items.length] = value;
     });
