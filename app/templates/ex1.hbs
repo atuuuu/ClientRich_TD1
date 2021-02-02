@@ -6,7 +6,7 @@
   <div class="card-body">
     <Textarea maxlength="100" @input={{this.update}} class="form-control mb-3" rows="4" @value={{this.content}}></Textarea>
     <div class="alert {{this.note}}">Il vous reste {{this.size}} caractères à saisir.</div>
-    <button type="button" {{on "click" this.save}}>Save</button>
+    <button type="button" {{action "save" this.content}}>Save</button>
     <button type="button" {{on "click" this.clear}}>clear</button>
     <div class={{this.style}}>
       <p>{{this.status}}</p>

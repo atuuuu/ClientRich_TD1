@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
-import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 const MAX = 100;
 
@@ -39,15 +39,6 @@ export default class Ex1Controller extends Controller {
     } else if (this.content.length >= 80) {
       this.note = 'alert-danger';
     }
-  }
-
-  @action
-  save() {
-    if (this.content.length > 0) {
-      this.info = 'alert-success';
-      this.status = 'Note sauvegardée';
-    }
-    Ex1Controller.items = this.content;
   }
 
   set items(content) {
