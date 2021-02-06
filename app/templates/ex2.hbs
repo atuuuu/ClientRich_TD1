@@ -1,0 +1,12 @@
+{{page-title "Ex2"}}
+
+<h1 class="align-content-end card-header">Services</h1>
+
+<p>Choisissez les éléments à inclure</p>
+<p class="card fw-bold">{{ this.serviceActifs }} {{plural @model.countActive "service"}} {{plural @model.countActive "selectionné"}}</p>
+<ul>
+  {{#each @model.services as |srv|}}
+    <li {{action "toggleService" srv.name}}>{{srv.name}}</li>
+  {{/each}}
+</ul>
+{{outlet}}
