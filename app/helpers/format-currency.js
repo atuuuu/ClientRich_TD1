@@ -1,11 +1,13 @@
 import { helper } from '@ember/component/helper';
 
-function formatCurreny(value, symbol) {
+function formatCurreny(param) {
+  var value = param[0];
+  var symbol = param[1];
   value = value * 100;
-  value = (int)(value);
-  value = (double)(value/100);
+  value = Math.round(value);
+  value = (value/100);
 
-  retour = value + symbol;
+  var retour = value + symbol;
   return retour;
 }
 
