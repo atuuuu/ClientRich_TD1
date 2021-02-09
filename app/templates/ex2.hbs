@@ -1,13 +1,24 @@
 {{page-title "Ex2"}}
 
-<h1 class="align-content-end card-header">Services</h1>
+<div style="height: 50%; width: 27%; margin-left: 35%; margin-right: 35%; background-color: #61A1BB; color: white;">
+  <div>
+    <h1 style="margin-top: 9%; text-align: center;">Services</h1>
+  </div>
 
-<p>Choisissez les éléments à inclure</p>
-<ul>
-  {{#each @model.services as |srv|}}
-    <li {{action "toggleService" srv.name}}>{{srv.name}}</li>
-  {{/each}}
-</ul>
-<p class="card fw-bold">{{ this.serviceActifs }} {{plural @model.countActive "service"}} {{plural @model.countActive "selectionné"}}</p>
-<p class="card fw-bold">Coût total : {{format-currency this.prix "€"}}</p>
+  <div style="background-color: #D9EDF7; color: black; margin-left: 11%; margin-right: 11%; border-radius: 4px">
+    <p style="padding: 2%">Choisissez les éléments à inclure <br/>
+      <b>{{ this.serviceActifs }} {{plural @model.countActive "service"}} {{plural @model.countActive "selectionné"}}</b></p>
+  </div>
+
+  <ul class="list-group">
+    {{#each @model.services as |srv|}}
+      <li id="{{srv.name}}" {{action "select" srv.name}} style="display: inline; list-style: none; padding: 2%; margin-top: 2%; background-color: {{selected srv.active}}; margin-left: 11%; margin-right: 11%; border-radius: 4px" {{action "toggleService" srv.name}}>{{srv.name}} <p style="display: inline; float: right;">{{format-currency srv.price "€"}}</p></li>
+    {{/each}}
+  </ul>
+  <hr style="margin-right: 11%; margin-left: 11%;"/>
+  <div style="margin-right: 11%; margin-left: 11%; background-color: #61A1BB; display: flow-root">
+    <p style="margin-left: 4%; float: left; font-size: 130%; display: inline; background-color: inherit">Total : </p><p style="background-color: inherit; margin-right: 4%; float: right; font-size: 130%; display: inline"> {{format-currency this.prix "€"}}</p>
+  </div>
+</div>
+
 {{outlet}}
