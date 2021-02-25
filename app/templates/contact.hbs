@@ -1,0 +1,7 @@
+{{page-title "Contact"}}
+<ul>
+  {{#each @model as |contact|}}
+    <li>{{contact.nom contact.prenom contact.mail}}</li>
+  {{/each}}
+</ul>
+{{outlet}}
