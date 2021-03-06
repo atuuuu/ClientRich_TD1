@@ -7,7 +7,6 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route("contact");
   this.route("categories", function() {
     this.route("add");
     this.route("update", {path: "/update/:category_id"});

@@ -1,2 +1,11 @@
 {{page-title "Categories"}}
-{{outlet}}
+<div>
+  <BsNav @type="tabs" as |nav|>
+  {{#each @model as |cat|}}
+    <nav.item>
+      <nav.link-to @route="categories.contacts" @model={{cat.id}}>{{cat.nom}}</nav.link-to>
+    </nav.item>
+  {{/each}}
+  </BsNav>
+  {{outlet}}
+</div>

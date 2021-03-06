@@ -1,2 +1,6 @@
 {{page-title "Add"}}
+<Input @value={{ @model.prenom }}/>
+<Input @value={{ @model.nom }}/>
+<Input @value={{ @model.mail }}/>
+<button {{action "save" @model}}>Save</button>
 {{outlet}}
