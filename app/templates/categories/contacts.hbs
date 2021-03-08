@@ -4,4 +4,8 @@
     <li><p>{{contact.nom}} {{contact.prenom}} {{contact.mail}}</p></li>
   {{/each}}
   {{outlet}}
+  <div>
+    <button {{action "addContact"}}>Ajouter un contact</button>
+  </div>
 </ul>
+<br/>
