@@ -16,5 +16,6 @@ export default class CategoriesContactsAddRoute extends Route {
 
     var record = store.createRecord('contact', contact);
     record.save();
+    this.transitionTo('categories.contacts.add');
   }
 }
