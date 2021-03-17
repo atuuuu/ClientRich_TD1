@@ -8,10 +8,10 @@
       </div>
       <div class="right floated menu">
         <a class="item">
-          Se déconnecter
+          <p {{action 'login'}}>{{is-connected '@model.isLoggedIn'}}</p>
         </a>
       </div>
     </div>
   </div>
-{{outlet}}
+  {{outlet}}
 </div>

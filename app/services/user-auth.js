@@ -13,6 +13,7 @@ export default class UserAuthService extends Service {
       set(this, 'user', u);
     }
   }
+
   getUser() {
     return this.user;
   }
@@ -31,4 +32,3 @@ export default class UserAuthService extends Service {
     this.storage.user = JSON.stringify({ id: user.id, email: user.email });
   }
 }
-
