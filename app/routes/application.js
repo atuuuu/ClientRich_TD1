@@ -5,13 +5,6 @@ import { tracked } from '@glimmer/tracking';
 import Abstractroute from "./Abstractroute";
 
 export default class ApplicationRoute extends Abstractroute {
-  @service userAuth;
-  @tracked isLogedIn = !this.userAuth.isAuth?"Connexion":"Deconnexion";
-
-  willTransition(transition) {
-    console.log("Transition : " + transition);
-    this.isLogedIn = !this.userAuth.isAuth?"Connexion":"Deconnexion";
-  }
 
   model() {
     return this;

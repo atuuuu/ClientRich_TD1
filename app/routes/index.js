@@ -6,7 +6,6 @@ export default class IndexRoute extends Route {
   @service userAuth;
   @action
   openSection() {
-    console.log("coucou : " + this.userAuth.isAuth);
     if(this.userAuth.isAuth)
     {
       this.transitionTo('sections');

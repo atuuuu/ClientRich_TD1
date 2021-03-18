@@ -1,7 +1,7 @@
 <div class="ui inverted segment">
   <div class="ui inverted relaxed divided list" style="display: flex; flex-direction: row;">
     <a class="title">{{@name}}</a>
-    <a style="margin-left: auto; color: darkred;">Supprimer</a>
+    <a class="ui button red" style="margin-left: auto;" {{action "supprimer" @id}}>Supprimer</a>
   </div>
   <p class="short-description">{{@description}}</p>
 </div>
