@@ -1,4 +1,8 @@
-<div class="ui menu">
-  <p>Nom : {{section.name}}</p>
+<div class="ui inverted segment">
+  <div class="ui inverted relaxed divided list" style="display: flex; flex-direction: row;">
+    <a class="title">{{@name}}</a>
+    <a style="margin-left: auto; color: darkred;">Supprimer</a>
+  </div>
+  <p class="short-description">{{@description}}</p>
 </div>
 {{yield}}

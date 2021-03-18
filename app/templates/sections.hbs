@@ -1,5 +1,15 @@
 {{page-title "Sections"}}
-{{#each @model as |sec|}}
-  <SectionUi></SectionUi>
-{{/each}}
+<div style="display: flex; flex-flow: row nowrap">
+  <div style="display: flex; flex-flow: column nowrap; width: 50%;">
+    {{#each @model as |sec|}}
+      <Section-ui @name={{sec.name}} @description={{sec.description}}></Section-ui>
+    {{/each}}
+  </div>
+
+  <div>
+    <p>AJOUTER UNE SECTION</p>
+    <p>AJOUTER UN PRODUIT</p>
+  </div>
+</div>
+
 {{outlet}}
