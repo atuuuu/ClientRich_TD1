@@ -1,14 +1,14 @@
 {{page-title "TD1"}}
 
-<div style="background-color: forestgreen;">
-  <div class="inverted green">
-    <div class="ui inverted green menu">
-      <div class="item active">
+<div style="background-color: transparent;">
+  <div>
+    <div class="ui menu" style="background-color: rgba(34,139,34, 1);">
+      <div class="item active" {{action "toMenu"}}>
         Tableau de bord
       </div>
       <div class="right floated menu">
-        <a class="item">
-          <p {{action 'login'}}>{{is-connected '@model.isLoggedIn'}}</p>
+        <a class="item" {{action 'login'}}>
+          <p>{{@model.isLogedIn}}</p>
         </a>
       </div>
     </div>

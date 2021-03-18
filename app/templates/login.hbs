@@ -2,12 +2,12 @@
 
 <div style="display: flex; flex-flow: column nowrap;">
   <label for="utilisateur" style="width: max-content; margin: auto;">Nom d'utilisateur</label>
-  <input id="utilisateur" type="text" style="width: max-content; margin: auto;">
+  <Input id="utilisateur" type="text" style="width: max-content; margin: auto;" @value={{name}}/>
 
   <label for="pass" style="width: max-content; margin: auto;">Mot de passe</label>
-  <input type="password" style="width: max-content; margin: auto;">
+  <Input type="password" style="width: max-content; margin: auto;" @value={{password}}/>
 
-  <input type="submit" style="width: max-content; margin: auto;">
+  <input {{action 'login' name password}} type="submit" style="width: max-content; margin: auto;">
 </div>
 
 {{outlet}}
