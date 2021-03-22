@@ -1,25 +1,52 @@
 {{page-title "Index"}}
 
-<div class="ui grid centered">
+  <div class="ui grid centered" style="margin: 5px;">
 
-<div class="two wide column">
-  <div class="ui card" {{action "openSection"}}>
-    <img src="https://www.lavantgardiste.com/25076-thickbox_default/petit-pot-a-fleur-en-terre-cuite.jpg"
-         style="width: 100%; height: auto;" />
-    <h4>Sections</h4>
-    <p>Pour gérer vos sections</p>
+    <div class="four wide column">
+      <div class="ui card" {{action "openSection"}}>
+        <img src="https://www.lavantgardiste.com/25076-thickbox_default/petit-pot-a-fleur-en-terre-cuite.jpg"
+             style="width: 100%; height: auto;" />
+        <h4>Sections</h4>
+        <p>Pour gérer vos sections</p>
+      </div>
+    </div>
+
+    <div class="four wide column">
+      <div class="ui card">
+        <img src="https://www.francefleurs.com/11634-large_default/bouquet-de-roses-roses-sur-mesure.jpg"
+             style="width: 100%; height: auto;" />
+        <h4>Mes commandes</h4>
+        <p>Pour compléter ou modifier les commandes clients</p>
+      </div>
+    </div>
+
+    <div class="four wide column">
+      <div class="ui card">
+        <img src="https://www.francefleurs.com/11634-large_default/bouquet-de-roses-roses-sur-mesure.jpg"
+             style="width: 100%; height: auto;" />
+        <h4>Mes commandes</h4>
+        <p>Pour compléter ou modifier les commandes clients</p>
+      </div>
+    </div>
+
+    <div class="four wide column">
+      <div class="ui card">
+        <img src="https://www.francefleurs.com/11634-large_default/bouquet-de-roses-roses-sur-mesure.jpg"
+             style="width: 100%; height: auto;" />
+        <h4>Mes commandes</h4>
+        <p>Pour compléter ou modifier les commandes clients</p>
+      </div>
+    </div>
+
   </div>
-</div>
 
-<div class="two wide column">
-  <div class="ui card">
-    <img src="https://www.francefleurs.com/11634-large_default/bouquet-de-roses-roses-sur-mesure.jpg"
-         style="width: 100%; height: auto;" />
+  <div>
     <h4>Mes commandes</h4>
-    <p>Pour compléter ou modifier les commandes clients</p>
+
+    {{#each @model.commandes as |com|}}
+      <div>
+        <p>{{com.nom}}</p>
+      </div>
+    {{/each}}
   </div>
-</div>
-
-</div>
-
 {{outlet}}

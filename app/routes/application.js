@@ -19,6 +19,7 @@ export default class ApplicationRoute extends Abstractroute {
     }
     else {
       this.userAuth.logout();
+      this.transitionTo('/login');
     }
   }
 

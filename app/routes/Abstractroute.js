@@ -9,5 +9,8 @@ export default class Abstractroute extends Route {
       console.log("Transition to index")
       this.transitionTo('index');
     }
+    else {
+      this.transitionTo('login');
+    }
   }
 }

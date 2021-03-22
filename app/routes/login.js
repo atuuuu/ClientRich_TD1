@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 import Abstractroute from "./Abstractroute";
 
-export default class LoginRoute extends Abstractroute {
+export default class LoginRoute extends Route {
   @service userAuth;
   store;
 
