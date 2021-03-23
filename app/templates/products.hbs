@@ -1,3 +1,10 @@
 {{page-title "Products"}}
+<div class="ui list">
+  {{#each @model as |prod|}}
+    <Product-view @name={{prod.name}} @comment={{prod.comment}} @image={{prod.image}}></Product-view>
+  {{/each}}
+</div>
+
 <LinkTo @route="products.add"><p>ajouter un produit</p></LinkTo>
 {{outlet}}
+
