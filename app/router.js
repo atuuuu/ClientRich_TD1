@@ -12,4 +12,9 @@ Router.map(function () {
 
   this.route('login');
   this.route('sections');
+
+  this.route('products', {path : '/products'}, function() {
+    this.route('add');
+  });
+  this.route('orders');
 });

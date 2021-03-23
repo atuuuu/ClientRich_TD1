@@ -4,14 +4,30 @@ import { inject as service } from '@ember/service';
 import Abstractroute from "./Abstractroute";
 
 export default class IndexRoute extends Abstractroute {
+
+  model() {
+    return this.get('store').findAll('order');
+  }
+
   @action
   openSection() {
-    if(this.userAuth.isAuth)
-    {
-      this.transitionTo('sections');
-    }
-    else {
-      this.transitionTo('login');
-    }
+    this.transitionTo('sections');
   }
+
+  @action
+  openProduits() {
+    this.transitionTo('products');
+  }
+
+  @action
+  openCommandes() {
+    this.transitionTo('orders');
+  }
+
+  @action
+  open() {
+    console.log("Not implemented yet");
+  }
+
+
 }

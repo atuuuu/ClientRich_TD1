@@ -1,0 +1,11 @@
+<UiDropdown class="selection multiple" @selected={{@model.product.packs}} @onChange={{fn (mut @model.product.packs)}} as |execute mapper|>
+  <div class="default text">Packs</div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+    {{#each @model.products as |product|}}
+      <div data-value="{{map-value mapper product}}" class="item">
+        {{product.name}}
+      </div>
+    {{/each}}
+  </div>
+</UiDropdown>
