@@ -16,5 +16,7 @@ Router.map(function () {
   this.route('products', {path : '/products'}, function() {
     this.route('add');
   });
-  this.route('orders');
+  this.route('orders', function(id) {
+    this.route('id', {path : 'orders/:order_id'});
+  });
 });

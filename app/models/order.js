@@ -10,7 +10,7 @@ export default class OrderModel extends Model {
   @attr ('number') itemsNumber;
   @attr ('number') missingNumber;
   @attr ('number') idTimeSlot;
-  //@belongsTo ('timeSlot') idTimeSlot; MODEL TIMESLOT
+  @belongsTo ('timeSlot') idTimeSlot;
   @belongsTo ('employee') employee;
-  //@belongsTo ('user') user;
+  @belongsTo ('user') user;
 }
