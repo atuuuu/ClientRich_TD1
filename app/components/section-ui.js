@@ -5,12 +5,16 @@ export default class SectionUiComponent extends Component {
   @action
   supprimer(model, id) {
     var store = model.get('store')
-
     var section = store.findRecord('section', id, { reload: true });
     section.then(function(value) {
       value.deleteRecord();
       value.save();
     });
+  }
 
+  @action
+  ajouterProduit(model, id) {
+    console.log(model);
+    model.addProduct();
   }
 }

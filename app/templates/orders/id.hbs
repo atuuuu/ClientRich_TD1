@@ -1,6 +1,17 @@
 {{page-title "Id"}}
-<p>test</p>
-<p>{{@model.data.user.name}}</p>
-<p>{{@model.data.amount}}</p>
-<p>{{@model.data.idTimeSlot.slotDate}}</p>
+
+<h1>Commande : </h1>
+<div class="ui list" style="margin: 2%; width: max-content">
+  <a class="item">
+    <i class="right triangle icon"></i>
+    <div class="content">
+      <div class="header">Passée par : {{@model.data.user.name}}</div>
+      <div class="description">Total : {{@model.data.amount}}€</div>
+      <div class="description">Reste à payer : {{@model.data.toPay}}€</div>
+      <div class="description">Passée le : {{moment-format @model.data.idTimeSlot.slotDate 'LLLL'}}</div>
+    </div>
+  </a>
+</div>
+
+
 {{outlet}}

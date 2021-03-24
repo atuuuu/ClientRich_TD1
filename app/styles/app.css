@@ -1,3 +1,21 @@
 body {
-  background-color: rgba(1, 105, 54, 1);
+  background-attachment: fixed;
+  background-image: url("https://i.ytimg.com/vi/bXlQ3Mw4uGc/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: cover;
+}
+
+.headText {
+  font-size: 40px;
+  color: forestgreen;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Helvetica', 'Arial', sans-serif;
+}
+
+footer {
+  color: limegreen;
+  position: fixed;
+  bottom: 0;
+  height: 20px;
+  width: 100%;
 }

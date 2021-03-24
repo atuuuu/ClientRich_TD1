@@ -15,16 +15,16 @@ export default class ApplicationRoute extends Abstractroute {
     console.log(this.userAuth.isAuth);
     if(!this.userAuth.isAuth)
     {
-      this.transitionTo('/login');
+      this.transitionTo('login');
     }
     else {
       this.userAuth.logout();
-      this.transitionTo('/login');
+      this.transitionTo('login');
     }
   }
 
   @action
   toMenu() {
-    this.transitionTo('/index');
+    this.transitionTo('index');
   }
 }

@@ -1,4 +1,4 @@
-import Model, { attr, belongsTo  } from '@ember-data/model';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
 
 export default class OrderModel extends Model {
   @attr ('number') idUser;
@@ -10,7 +10,12 @@ export default class OrderModel extends Model {
   @attr ('number') itemsNumber;
   @attr ('number') missingNumber;
   @attr ('number') idTimeSlot;
+  @hasMany ('orderdetail') details;
   @belongsTo ('timeSlot') idTimeSlot;
   @belongsTo ('employee') employee;
   @belongsTo ('user') user;
+
+  get count() {
+    return this.details.length;
+  }
 }

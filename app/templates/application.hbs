@@ -1,17 +1,24 @@
 {{page-title "TD1"}}
 
 <div style="background-color: transparent;">
-  <div>
-    <div class="ui menu" style="background-color: rgba(34,139,34, 1);">
-      <div class="item active" {{action "toMenu"}}>
-        Tableau de bord
+  <div style="position: fixed; top: 0; width: 100%;">
+    <div class="ui three item menu" style="background-color: rgba(34,139,34, 0.4);">
+      <div class="left floated item" {{action "toMenu"}}>
+        <a class="item">Tableau de bord</a>
       </div>
-      <div class="right floated menu">
+      <div class="centered item"><h1 class="headText">Jardi'Plante</h1></div>
+      <div class="right floated item">
         <a class="item" {{action 'login'}}>
           <p>{{is-connected @model.userAuth.isAuth}}</p>
         </a>
       </div>
     </div>
   </div>
+</div>
+<div style="margin-top: 4%;">
   {{outlet}}
 </div>
+
+<footer style="background-color: darkgreen; opacity: 80%;">
+  Copyright : Arthur BOYREAU
+</footer>

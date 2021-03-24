@@ -1,14 +1,14 @@
 import Route from '@ember/routing/route';
 
 export default class SectionsRoute extends Route {
-  store;
+  sections;
 
   model() {
-    this.store = this.get('store');
-    var sections = this.store.findAll('section');
-    sections.then(value => {
-      console.log(value);
-    })
-    return sections;
+    this.sections = this.store.findAll('section');
+    return this;
+  }
+
+  addProduct() {
+    this.transitionTo('products.add');
   }
 }
