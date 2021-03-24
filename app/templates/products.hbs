@@ -1,9 +1,12 @@
 {{page-title "Products"}}
-{{outlet}}
-<div class="ui list">
+<div style="margin: auto; width: max-content;">
+  <LinkTo @route="products.add"><p>ajouter un produit</p></LinkTo>
+  {{outlet}}
+</div>
+
+<div class="ui relaxed divided list"
+     style="background: linear-gradient(rgba(0, 127, 00, 0.4), rgba(0, 127, 00, 0.4)); border-radius: 2px; width: max-content; margin: 1% auto auto;">
   {{#each @model as |prod|}}
     <Product-view @name={{prod.name}} @comment={{prod.comment}} @image={{prod.image}}></Product-view>
   {{/each}}
 </div>
-
-<LinkTo @route="products.add"><p>ajouter un produit</p></LinkTo>

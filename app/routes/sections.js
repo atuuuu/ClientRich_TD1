@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route';
+import { action } from '@ember/object';
 
 export default class SectionsRoute extends Route {
   sections;
@@ -9,6 +10,10 @@ export default class SectionsRoute extends Route {
   }
 
   addProduct() {
-    this.transitionTo('products.add');
+    this.transitionTo('sections.addProduct');
+  }
+
+  @action addSection() {
+    this.transitionTo('sections.add')
   }
 }

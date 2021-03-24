@@ -11,7 +11,10 @@ Router.map(function () {
 
   this.route('login', {path : '/'});
   this.route('login', {path : '/index'});
-  this.route('sections');
+  this.route('sections', function() {
+    this.route('addProduct');
+    this.route('add');
+  });
 
   this.route('products', function() {
     this.route('add');

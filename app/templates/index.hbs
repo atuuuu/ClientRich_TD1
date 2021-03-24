@@ -33,7 +33,7 @@
 </div>
 
 <div style="width: max-content; margin: auto; display: block; opacity: 75%;" class="ui menu">
-  <h2>Mes commandes</h2>
+  <h2 class="headText" style="font-size: 24px;">Mes commandes</h2>
 
   {{#each @model.orders as |com|}}
       <LinkTo @route="orders.id" @model={{com.id}} style="margin: 1%;">

@@ -1,7 +1,8 @@
 {{page-title "Sections"}}
 <div style="display: flex; flex-flow: column nowrap;">
   <div style="margin: 0.5% auto;">
-    <a class="ui button">AJOUTER UNE SECTION</a>
+    <a class="ui button" {{action "addSection"}}>AJOUTER UNE SECTION</a>
+    {{outlet}}
   </div>
 
   <div style="display: flex; flex-flow: column nowrap; width: 50%; margin: auto;">
@@ -11,4 +12,3 @@
   </div>
 </div>
 
-{{outlet}}
