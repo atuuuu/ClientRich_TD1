@@ -1,2 +1,13 @@
 {{page-title "Add"}}
+<form class="ui form">
+  <div class="field">
+    <label>Name</label>*
+    {{input value=nom placeholder="Nom" type="text"}}
+  </div>
+  <div class="field">
+    <label>Description</label>
+    {{input value=desc placeholder="Description" type="text"}}
+  </div>
+  <button class="ui button" type="submit" {{action "addSection" nom desc}}>Enregistrer</button>
+</form>
 {{outlet}}
