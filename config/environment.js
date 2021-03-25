@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'td1',
@@ -41,6 +40,7 @@ module.exports = function (environment) {
 
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
+    ENV.moment = { includeLocales: ['en', 'fr'] };
   }
 
   if (environment === 'production') {

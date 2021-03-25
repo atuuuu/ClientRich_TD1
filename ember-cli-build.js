@@ -6,6 +6,7 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
   });
+  app.import('node_modules/moment/locale/fr.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
