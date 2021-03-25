@@ -1,3 +1,24 @@
 {{page-title "AddProduct"}}
-<p>Ajouter un produit</p>
+<div class="ui form">
+  <div class="three fields">
+    <div class="field">
+      <label>Nom*</label>
+      {{input type="text" placeholder="nom" value=nom}}
+    </div>
+    <div class="field">
+      <label>Prix*</label>
+      {{input type="number" placeholder="prix" value=prix}}
+    </div>
+    <div class="field">
+      <label>Image</label>
+      {{input type="text" placeholder="url" value=image}}
+    </div>
+  </div>
+  <div class="field">
+    <label>Description*</label>
+    {{textarea rows="2" value=desc}}
+  </div>
+  <button class="ui button blue" type="submit" {{action "saveProduct" nom prix image desc}}>Enregistrer</button>
+  <button class="ui button red" {{action "cancel"}}>Annuler</button>
+</div>
 {{outlet}}

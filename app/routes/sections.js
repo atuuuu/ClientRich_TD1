@@ -10,8 +10,8 @@ export default class SectionsRoute extends Route {
   }
 
   @action
-  addProduct(name) {
-    this.transitionTo('sections.addProduct', name);
+  addProduct(id) {
+    this.transitionTo('sections.addProduct', id);
   }
 
   @action addSection() {

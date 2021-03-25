@@ -13,7 +13,7 @@ export default class SectionUiComponent extends Component {
   }
 
   @action
-  ajouterProduit(model, name) {
-    model.addProduct(name);
+  ajouterProduit(model, name, id) {
+    model.addProduct(id);
   }
 }

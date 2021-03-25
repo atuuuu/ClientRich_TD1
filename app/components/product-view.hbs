@@ -1,12 +1,14 @@
-<div class="item">
-  {{#if @image}}
-    <img class="ui avatar image" src={{@image}}>
-  {{else}}
-    <img class="ui avatar image" src="https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png">
-  {{/if}}
-
+<div class="ui card">
+  <div class="image">
+    {{#if @image}}
+      <img class="ui avatar image" src={{@image}}>
+    {{else}}
+      <img class=""
+           src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg">
+    {{/if}}
+  </div>
   <div class="content">
-    <p class="header">{{@name}}</p>
+    <a class="header">{{@name}}</a>
     <div class="description">{{@comment}}</div>
   </div>
 </div>
