@@ -4,9 +4,8 @@
   {{outlet}}
 </div>
 
-<div class="ui relaxed divided list"
-     style="background: linear-gradient(rgba(0, 127, 00, 0.4), rgba(0, 127, 00, 0.4)); border-radius: 2px; width: max-content; margin: 1% auto auto;">
-  {{#each @model as |prod|}}
+{{#each @model as |prod|}}
+  <div class="row">
     <Product-view @name={{prod.name}} @comment={{prod.comment}} @image={{prod.image}}></Product-view>
-  {{/each}}
-</div>
+  </div>
+{{/each}}

@@ -7,7 +7,10 @@
 
   <div style="display: flex; flex-flow: column nowrap; width: 50%; margin: auto;">
     {{#each @model.sections as |sec|}}
-      <Section-ui @name={{sec.name}} @description={{sec.description}} @id={{sec.id}} @model={{@model}}></Section-ui>
+      <div style="display: inline-flex; margin: 0 0 1% 1%;">
+        <Section-ui @name={{sec.name}} @description={{sec.description}} @id={{sec.id}} @model={{@model}}></Section-ui>
+      </div>
+      {{outlet sec.id}}
     {{/each}}
   </div>
 </div>

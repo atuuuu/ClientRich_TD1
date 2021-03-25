@@ -1,14 +1,15 @@
 <div class="ui segment" style="opacity: 80%; background-color: seagreen;">
-  <div style="display: flex; flex-direction: row">
-    <div class="ui inverted relaxed divided list">
+  <div style="display: flex; flex-direction: row;">
+    <i class="angle double right icon" {{action "sectionDetails" sec.id}} style="margin-top: 2.5%;"></i>
+    <div class="ui inverted relaxed divided list" {{action "sectionDetails" @model @id}}>
       <h1 class="title">{{@name}}</h1>
     </div>
-    <div style="margin-left: auto;">
+    <div style="margin-left: auto; width: max-content">
       <a class="ui button" style="margin-left: auto;" {{action "ajouterProduit" @model @name @id}}>AJOUTER UN PRODUIT</a>
       <a class="ui button red" {{action "supprimer" @model @id}}>Supprimer</a>
     </div>
   </div>
-  <p class="short-description">{{@description}}</p>
+  <p class="short-description"  {{action "sectionDetails" @model @id}}>{{@description}}</p>
   {{outlet @name}}
 </div>
 {{yield}}

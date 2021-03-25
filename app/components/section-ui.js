@@ -16,4 +16,9 @@ export default class SectionUiComponent extends Component {
   ajouterProduit(model, name, id) {
     model.addProduct(id);
   }
+
+  @action
+  sectionDetails(model, id) {
+    model.sectionDetails(id);
+  }
 }

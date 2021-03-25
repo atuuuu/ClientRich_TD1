@@ -15,6 +15,10 @@ export default class SectionsRoute extends Route {
   }
 
   @action addSection() {
-    this.transitionTo('sections.add')
+    this.transitionTo('sections.add');
+  }
+
+  @action sectionDetails(id) {
+    this.transitionTo('sections.edit', id);
   }
 }

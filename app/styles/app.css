@@ -19,3 +19,9 @@ footer {
   height: 20px;
   width: 100%;
 }
+
+.row {
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+}
