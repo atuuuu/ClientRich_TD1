@@ -1,11 +1,17 @@
 {{page-title "Edit"}}
+
 <div class="field">
   {{input value=nouveauNom placeholder="Nouveau nom pour la section" type="text"}}
   <button type="submit">Enregistrer</button>
 </div>
 
+<div class="ui items" style="text-align: initial;">
 {{#each @model.products as |prod|}}
-  <p>{{prod.name}}</p>
-  <Product-view @name={{prod.name}} @comment={{prod.comment}} @image={{prod.image}}></Product-view>
+  {{#if (is-valid prod.section.id @model.sectId)}}
+    <div class="row">
+      <Product-view @name={{prod.name}} @comment={{prod.comment}} @image={{prod.image}}></Product-view>
+    </div>
+  {{/if}}
 {{/each}}
+</div>
 {{outlet}}

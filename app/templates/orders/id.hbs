@@ -1,17 +1,16 @@
 {{page-title "Id"}}
 
-<h1>Commande : </h1>
-<div class="ui list" style="margin: 2%; width: max-content">
-  <a class="item">
+<div class="ui white card" style="margin: 1% auto 0 auto; width: max-content; opacity: 80%;">
+  <h1 class="header">Commande {{@model.data.id}} </h1>
+  <p class="item headText" style="font-size: 16px;">
     <i class="right triangle icon"></i>
     <div class="content">
-      <div class="header">Passée par : {{@model.data.user.name}}</div>
+      <h3 class="header">Passée par : {{@model.data.user.name}}</h3>
       <div class="description">Total : {{@model.data.amount}}€</div>
       <div class="description">Reste à payer : {{@model.data.toPay}}€</div>
       <div class="description">Passée le : {{moment-format @model.data.idTimeSlot.slotDate 'LLLL'}}</div>
     </div>
-  </a>
+  </p>
 </div>
 
 
-{{outlet}}

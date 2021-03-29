@@ -6,7 +6,6 @@ export default class SectionsAddProductRoute extends Route {
   secId;
 
   model(params) {
-    console.log(params.section_id)
     this.secId = params.section_id;
     this.outletName = this.store.peekRecord('section', params.section_id).name;
   }

@@ -3,6 +3,7 @@ import { action } from '@ember/object';
 
 export default class SectionsRoute extends Route {
   sections;
+  oldId;
 
   model() {
     this.sections = this.store.findAll('section');
@@ -11,7 +12,10 @@ export default class SectionsRoute extends Route {
 
   @action
   addProduct(id) {
-    this.transitionTo('sections.addProduct', id);
+    let tmp = this;
+    this.transitionTo('sections').then(function() {
+      tmp.transitionTo('sections.addProduct', id);
+    });
   }
 
   @action addSection() {
@@ -19,6 +23,16 @@ export default class SectionsRoute extends Route {
   }
 
   @action sectionDetails(id) {
-    this.transitionTo('sections.edit', id);
+    if(this.oldId === id) {
+      this.transitionTo('sections');
+      this.oldId = -1;
+    }
+    else {
+      this.oldId = id;
+      let tmp = this;
+      this.transitionTo('sections').then(function() {
+        tmp.transitionTo('sections.edit', id);
+      });
+    }
   }
 }

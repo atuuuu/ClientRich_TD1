@@ -5,12 +5,17 @@ export default class SectionsEditRoute extends Route {
 
   model(params) {
     this.secId = params.section_id;
-    console.log(params.section_id);
-    var sect = this.store.findAll('section', this.secId);
+    var sect = {};
+    sect.products = this.store.findAll('product');
+    sect.sectId = this.secId;
     return sect;
   }
 
   renderTemplate() {
     this.render({outlet: this.secId});
+  }
+
+  isValid(id) {
+    return this.secId == id;
   }
 }
