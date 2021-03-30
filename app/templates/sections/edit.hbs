@@ -1,8 +1,8 @@
 {{page-title "Edit"}}
 
-<div class="field">
+<div class="field" style="text-align: initial; /*margin-left: 1%; */">
   {{input value=nouveauNom placeholder="Nouveau nom pour la section" type="text"}}
-  <button type="submit">Enregistrer</button>
+  <button type="submit" {{action "rename" nouveauNom}}>Enregistrer</button>
 </div>
 
 <div class="ui items" style="text-align: initial;">

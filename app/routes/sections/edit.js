@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route';
+import { action } from '@ember/object';
 
 export default class SectionsEditRoute extends Route {
   secId;
@@ -17,5 +18,14 @@ export default class SectionsEditRoute extends Route {
 
   isValid(id) {
     return this.secId == id;
+  }
+
+  @action rename(nouvNom){
+    console.log(nouvNom);
+    this.store.findRecord('section', this.secId).then(function(section) {
+      section.set('name', nouvNom);
+      section.save();
+    });
+    this.transitionTo('sections');
   }
 }
