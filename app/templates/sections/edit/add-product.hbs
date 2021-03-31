@@ -1,0 +1,40 @@
+{{page-title "AddProduct"}}
+<div
+  style="width: 33%; margin-left: auto; margin-right: auto; background-color: forestgreen; opacity: 80%; border-radius: 5px; padding: 10px;">
+  <div class="ui form">
+    <div class="three fields">
+      <div class="field">
+        <label>Nom*</label>
+        {{input type="text" placeholder="nom" value=nom}}
+      </div>
+      <div class="field">
+        <label>Prix*</label>
+        {{input type="number" placeholder="prix" value=prix}}
+      </div>
+      <div class="field">
+        <label>Image</label>
+        {{input type="text" placeholder="url" value=image}}
+      </div>
+    </div>
+    <div class="field">
+      <label>Description*</label>
+      {{textarea rows="2" value=desc}}
+    </div>
+
+    <UiDropdown class="selection multiple" @selected={{@model.product.packs}} @onChange={{fn (mut @model.product.packs)}} as |execute mapper|>
+      <div class="default text">Packs</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each @model.products as |product|}}
+          <div data-value="{{map-value mapper product}}" class="item">
+            {{product.name}}
+          </div>
+        {{/each}}
+      </div>
+    </UiDropdown>
+
+    <button class="ui button blue" type="submit" {{action "saveProduct" nom prix image desc}}>Enregistrer</button>
+    <button class="ui button red" {{action "cancel"}}>Annuler</button>
+  </div>
+</div>
+{{outlet}}

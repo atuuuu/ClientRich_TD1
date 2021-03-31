@@ -12,9 +12,11 @@ Router.map(function () {
   this.route('login', {path : '/'});
   this.route('login', {path : '/index'});
   this.route('sections', function() {
-    this.route('addProduct', { path : 'addProduct/:section_id' });
+    //this.route('addProduct', { path : 'addProduct/:section_id' });
     this.route('add');
-    this.route('edit', { path : 'edit/:section_id' });
+    this.route('edit', { path : 'edit/:section_id' }, function() {
+      this.route('addProduct');
+    });
     this.route('delete', { path : 'delete/:section_id' });
   });
 

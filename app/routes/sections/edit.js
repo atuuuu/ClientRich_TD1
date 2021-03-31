@@ -1,7 +1,8 @@
 import Route from '@ember/routing/route';
 import { action } from '@ember/object';
+import Abstractroute from "../Abstractroute";
 
-export default class SectionsEditRoute extends Route {
+export default class SectionsEditRoute extends Abstractroute {
   secId;
 
   model(params) {
@@ -9,6 +10,7 @@ export default class SectionsEditRoute extends Route {
     var sect = {};
     sect.products = this.store.findAll('product');
     sect.sectId = this.secId;
+    sect.name = this.store.peekRecord('section', this.secId).name;
     return sect;
   }
 
@@ -33,7 +35,8 @@ export default class SectionsEditRoute extends Route {
   addProduct(id) {
     let tmp = this;
     this.transitionTo('sections').then(function() {
-      tmp.transitionTo('sections.addProduct', id);
+      console.log(id);
+      tmp.transitionTo('sections.edit.addProduct', id);
     });
   }
 }

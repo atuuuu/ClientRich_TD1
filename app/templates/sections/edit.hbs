@@ -1,17 +1,18 @@
 {{page-title "Edit"}}
-<form class="ui form">
+<form class="ui form" style="margin-bottom: 1%;">
   <div class="row">
     {{input type="text" value=nouveauNom placeholder="Nouveau nom pour la section"}}
     <button type="submit" class="ui button" {{action "rename" nouveauNom}}>Enregistrer</button>
     <a class="ui button blue" {{action "addProduct" @model.sectId}}>AJOUTER UN PRODUIT</a>
   </div>
 </form>
+{{outlet @model.name}}
 
-<div class="ui items" style="text-align: initial;">
+<div class="ui items" style="text-align: center;">
   {{#each @model.products as |prod|}}
     {{#if (is-valid prod.section.id @model.sectId)}}
       <div class="row">
-        <Product-view @name={{prod.name}} @prod={{prod}}></Product-view>
+        <Product-view @prod={{prod}}></Product-view>
       </div>
     {{/if}}
   {{/each}}

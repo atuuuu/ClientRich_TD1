@@ -1,4 +1,4 @@
-<div class="ui segment" style="opacity: 80%; background-color: seagreen;">
+<div class="ui segment" style="opacity: 80%; background-color: seagreen; width: 100%; text-align: left;">
   <div style="display: flex; flex-direction: row;">
     <div class="ui inverted relaxed divided list" {{action "sectionDetails" @model @id}}>
       <h1 class="title">{{@name}}</h1>
@@ -9,6 +9,9 @@
     </div>
   </div>
   <p class="short-description"  {{action "sectionDetails" @model @id}}>{{@description}}</p>
-  {{outlet @name}}
+
+  <div>
+    {{outlet @name}}
+  </div>
 </div>
 {{yield}}

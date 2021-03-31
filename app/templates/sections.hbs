@@ -6,7 +6,7 @@
   </div>
 
   {{#each @model.sections as |sec|}}
-    <div style="display: inline-flex; margin: 0 0 1% 1%;">
+    <div style="display: inline-flex; margin: auto 0 1% 0;">
       <Section-ui @name={{sec.name}} @description={{sec.description}} @id={{sec.id}} @model={{@model}}></Section-ui>
     </div>
     {{outlet sec.id}}

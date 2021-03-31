@@ -1,13 +1,19 @@
 import Route from '@ember/routing/route';
 import { action } from '@ember/object';
+import Abstractroute from "../../Abstractroute";
 
-export default class SectionsAddProductRoute extends Route {
+export default class SectionsAddProductRoute extends Abstractroute {
   outletName;
   secId;
 
   model(params) {
-    this.secId = params.section_id;
-    this.outletName = this.store.peekRecord('section', params.section_id).name;
+    let model;
+    let parent = this.modelFor('sections/edit');
+    this.secId = parent.sectId;
+    model = this.store.peekRecord('section', parent.sectId);
+    this.outletName = model.name;
+      console.log(this.outletName);
+    return model;
   }
 
   renderTemplate() {
@@ -31,11 +37,12 @@ export default class SectionsAddProductRoute extends Route {
       });
 
       prod.save();
+      this.cancel();
     }
   }
 
   @action
   cancel() {
-    this.transitionTo('sections');
+    this.transitionTo('sections.edit', this.secId);
   }
 }
