@@ -9,7 +9,7 @@ export default class SectionsRoute extends Abstractroute {
 
   model() {
     this.sections = this.store.findAll('section');
-    this.store.findAll('product');
+    this.store.findAll('product');  //Prépare l'affichage du détail des sections en prenant les produits en mémoire
     return this;
   }
 

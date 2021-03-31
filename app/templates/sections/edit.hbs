@@ -3,16 +3,16 @@
   <div class="row">
     {{input type="text" value=nouveauNom placeholder="Nouveau nom pour la section"}}
     <button type="submit" class="ui button" {{action "rename" nouveauNom}}>Enregistrer</button>
-    <a class="ui button blue" {{action "addProduct" @model.sectId}}>AJOUTER UN PRODUIT</a>
+    <a class="ui button blue" {{action "addProduct" @model.secId}}>AJOUTER UN PRODUIT</a>
   </div>
 </form>
 {{outlet @model.name}}
 
 <div class="ui items" style="text-align: center;">
   {{#each @model.products as |prod|}}
-    {{#if (is-valid prod.section.id @model.sectId)}}
+    {{#if (is-valid prod.section.id @model.secId)}}
       <div class="row">
-        <Product-view @prod={{prod}}></Product-view>
+        <Product-view @prod={{prod}} @model="{{@model}} @secId={{@model.secId}}"></Product-view>
       </div>
     {{/if}}
   {{/each}}

@@ -1,4 +1,4 @@
-<div class="ui card" style="margin: 5%; height: min-content">
+<div class="ui card" style="margin: 5%; height: min-content" {{action 'editProduct' @model @secId @prod.id}}>
   <div class="image" style="height: 220px; position: static">
     {{#if @prod.image}}
       <img class="" height="220px" src={{@prod.image}}>

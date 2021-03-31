@@ -8,11 +8,11 @@ export default class SectionsAddProductRoute extends Abstractroute {
 
   model(params) {
     let model;
-    let parent = this.modelFor('sections/edit');
-    this.secId = parent.sectId;
-    model = this.store.peekRecord('section', parent.sectId);
+    let parent = this.modelFor('sections.edit');
+    this.secId = parent.secId;
+    model = this.store.peekRecord('section', parent.secId);
     this.outletName = model.name;
-      console.log(this.outletName);
+    console.log(this.outletName);
     return model;
   }
 
