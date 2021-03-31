@@ -1,17 +1,19 @@
 {{page-title "Edit"}}
-
-<div class="field" style="text-align: initial; /*margin-left: 1%; */">
-  {{input value=nouveauNom placeholder="Nouveau nom pour la section" type="text"}}
-  <button type="submit" {{action "rename" nouveauNom}}>Enregistrer</button>
-</div>
+<form class="ui form">
+  <div class="row">
+    {{input type="text" value=nouveauNom placeholder="Nouveau nom pour la section"}}
+    <button type="submit" class="ui button" {{action "rename" nouveauNom}}>Enregistrer</button>
+    <a class="ui button blue" {{action "addProduct" @model.sectId}}>AJOUTER UN PRODUIT</a>
+  </div>
+</form>
 
 <div class="ui items" style="text-align: initial;">
-{{#each @model.products as |prod|}}
-  {{#if (is-valid prod.section.id @model.sectId)}}
-    <div class="row">
-      <Product-view @name={{prod.name}} @comment={{prod.comment}} @image={{prod.image}}></Product-view>
-    </div>
-  {{/if}}
-{{/each}}
+  {{#each @model.products as |prod|}}
+    {{#if (is-valid prod.section.id @model.sectId)}}
+      <div class="row">
+        <Product-view @name={{prod.name}} @prod={{prod}}></Product-view>
+      </div>
+    {{/if}}
+  {{/each}}
 </div>
 {{outlet}}

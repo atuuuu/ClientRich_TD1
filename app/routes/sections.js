@@ -13,13 +13,11 @@ export default class SectionsRoute extends Route {
   }
 
   @action
-  addProduct(id) {
-    this.oldIdSuppr = undefined;
+  willTransition(transition) {
+    if(transition.from.name=='sections.edit'){
     this.oldId = undefined;
-    let tmp = this;
-    this.transitionTo('sections').then(function() {
-      tmp.transitionTo('sections.addProduct', id);
-    });
+    this.oldIdSuppr = undefined;}
+    console.log("remise à 0")
   }
 
   @action addSection() {

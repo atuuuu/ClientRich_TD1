@@ -23,8 +23,11 @@ export default class SectionsDeleteRoute extends Route {
         val.save();
       });
     }).then(function() {
-      section.deleteRecord();
-      section.save();
+      new Promise(r => setTimeout(r, 500)).then(function() {
+        section.deleteRecord();
+        section.save();
+      });
     });
+    this.transitionTo('sections');
   }
 }

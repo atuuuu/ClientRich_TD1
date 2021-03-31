@@ -6,6 +6,6 @@
 
 {{#each @model as |prod|}}
   <div class="row">
-    <Product-view @name={{prod.name}} @comment={{prod.comment}} @image={{prod.image}}></Product-view>
+    <Product-view @prod={{prod}}></Product-view>
   </div>
 {{/each}}

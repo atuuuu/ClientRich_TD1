@@ -28,4 +28,12 @@ export default class SectionsEditRoute extends Route {
     });
     this.transitionTo('sections');
   }
+
+  @action
+  addProduct(id) {
+    let tmp = this;
+    this.transitionTo('sections').then(function() {
+      tmp.transitionTo('sections.addProduct', id);
+    });
+  }
 }

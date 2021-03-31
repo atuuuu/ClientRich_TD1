@@ -1,7 +1,7 @@
 <div class="ui card" style="margin: 5%; height: min-content">
   <div class="image" style="height: 220px; position: static">
-    {{#if @image}}
-      <img class="" height="220px" src={{@image}}>
+    {{#if @prod.image}}
+      <img class="" height="220px" src={{@prod.image}}>
     {{else}}
       <img class=""
            src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg" height="220px">
@@ -9,7 +9,7 @@
   </div>
 
   <div class="content" style="background-color: white">
-    <a class="header">{{@name}}</a>
-    <div class="description">{{@comment}}</div>
+    <a class="header">{{@prod.name}}</a>
+    <div class="description">{{@prod.price}}€</div>
   </div>
 </div>
