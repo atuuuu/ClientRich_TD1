@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Ubiquity\\tests\\unit\\' => array($vendorDir . '/phpmv/ubiquity-codeception/src/unit'),
-    'Ubiquity\\' => array($vendorDir . '/phpmv/ubiquity/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-attributes/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-commands/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-dev/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-devtools/src', $vendorDir . '/phpmv/ubiquity-webtools/src/Ubiquity'),
+    'Ubiquity\\' => array($vendorDir . '/phpmv/ubiquity-attributes/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-commands/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-dev/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-devtools/src', $vendorDir . '/phpmv/ubiquity-webtools/src/Ubiquity', $vendorDir . '/phpmv/ubiquity/src/Ubiquity'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),

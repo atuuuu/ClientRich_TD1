@@ -8,8 +8,8 @@
         {{input type="text" placeholder="nom" value=nom}}
       </div>
       <div class="field">
-        <label>Prix*</label>
-        {{input type="number" placeholder="prix" value=prix}}
+        <label>price*</label>
+        {{input type="number" placeholder="price" value=price}}
       </div>
       <div class="field">
         <label>Image</label>
@@ -33,7 +33,7 @@
       </div>
     </UiDropdown>
 
-    <button class="ui button blue" type="submit" {{action "saveProduct" nom prix image desc}}>Enregistrer</button>
+    <button class="ui button blue" type="submit" {{action "saveProduct" nom price image desc}}>Enregistrer</button>
     <button class="ui button red" {{action "cancel"}}>Annuler</button>
   </div>
 </div>

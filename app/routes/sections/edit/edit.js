@@ -17,20 +17,17 @@ export default class SectionEditRoute extends Abstractroute {
   @action
   saveProduct(newName, newPrice, newDesc) {
     console.log(newName + " " + newPrice + " " + newDesc);
-    this.store.findRecord("product", this.prodId).then(function(prod) {
+    this.store.findRecord("product", this.prodId, { reload: true} ).then(function(prod) {
       if (newName) {
         prod.set("name", newName);
-        prod.save();
       }
       if (newPrice) {
         prod.set("price", newPrice);
-        prod.save();
       }
       if (newDesc) {
         prod.set("comments", newDesc);
-        prod.save();
       }
-
+      prod.save();
     });
   }
 }

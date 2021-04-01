@@ -57,11 +57,11 @@ class SearchResult implements \JsonSerializable {
 		return $this;
 	}
 
-	public function getPrice() {
+	public function getprice() {
 		return $this->price;
 	}
 
-	public function setPrice($price) {
+	public function setprice($price) {
 		$this->price=$price;
 		return $this;
 	}

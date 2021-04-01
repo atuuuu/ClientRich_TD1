@@ -20,12 +20,12 @@ export default class SectionsAddProductRoute extends Abstractroute {
   }
 
   @action
-  saveProduct(nom, prix, image, desc) {
-    if(nom && prix && desc) {
+  saveProduct(nom, price, image, desc) {
+    if(nom && price && desc) {
 
       var prod = this.store.createRecord('product', {
         name: nom,
-        price: prix,
+        price: price,
         image: image,
         comments: desc,
         packs: [],

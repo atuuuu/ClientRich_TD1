@@ -1,26 +1,17 @@
 <?php
 namespace controllers;
 
-use Ubiquity\attributes\items\rest\Rest;
 use Ubiquity\attributes\items\router\Delete;
 use Ubiquity\attributes\items\router\Get;
 use Ubiquity\attributes\items\router\Options;
 use Ubiquity\attributes\items\router\Post;
 use Ubiquity\attributes\items\router\Put;
 use Ubiquity\attributes\items\router\Route;
-use Ubiquity\controllers\rest\RestServer;
-
+use Ubiquity\attributes\items\rest\Rest;
 
 #[Rest()]
-#[Route(path: "/rest/")]
+#[Route(path: "/rest")]
 class MyRestController extends \Ubiquity\controllers\rest\api\json\JsonRestController {
-
-	protected function getRestServer(): RestServer {
-		$srv=parent::getRestServer();
-		$srv->setAllowedOrigin('http://127.0.0.1:4200');
-		return $srv;
-	}
-
 
 	/**
 	 * Returns all the instances from the model $resource.
@@ -65,22 +56,22 @@ class MyRestController extends \Ubiquity\controllers\rest\api\json\JsonRestContr
 	}
 
 	/**
-	 * Route for CORS
-	 *
-	 * @route("{resource}","methods"=>["options"],"priority"=>3000)
-	 */
+	* Route for CORS
+	*
+	* @route("{resource}","methods"=>["options"],"priority"=>3000)
+	*/
 	#[Options('{resource}',priority: 3000)]
 	public function options(...$resource) {
 	}
 
 	/**
-	 * Inserts a new instance of $resource.
-	 * Data attributes are send in request body (in JSON format)
-	 *
-	 * @param string $resource The resource (model) to use
-	 * @route("{resource}/","methods"=>["post"],"priority"=>0)
-	 * @authorization
-	 */
+	* Inserts a new instance of $resource.
+	* Data attributes are send in request body (in JSON format)
+	*
+	* @param string $resource The resource (model) to use
+	* @route("{resource}/","methods"=>["post"],"priority"=>0)
+	* @authorization
+	*/
 	#[Post('{resource}',priority: 0)]
 	public function add($resource) {
 		parent::add_($resource);

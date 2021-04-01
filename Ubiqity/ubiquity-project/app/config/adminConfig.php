@@ -32,19 +32,5 @@ return array(
 							"message"=>"Our application is currently undergoing sheduled maintenance.<br>Thank you for your understanding."
 							]
 					]
-			],
-	"part1"=>[
-			"models",
-			"routes",
-			"controllers",
-			"cache",
-			"rest",
-			"config"
-			],
-	"part2"=>[
-			"themes",
-			"maintenance",
-			"composer"
-			],
-	"style"=>"inverted"
+			]
 	);

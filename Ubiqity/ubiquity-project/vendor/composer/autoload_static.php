@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit783aac61824818e41610badcaf272953
+class ComposerStaticInitb5984e08e0f6232bba98120ab7a707be
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -47,12 +47,12 @@ class ComposerStaticInit783aac61824818e41610badcaf272953
         ),
         'Ubiquity\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phpmv/ubiquity/src/Ubiquity',
-            1 => __DIR__ . '/..' . '/phpmv/ubiquity-attributes/src/Ubiquity',
-            2 => __DIR__ . '/..' . '/phpmv/ubiquity-commands/src/Ubiquity',
-            3 => __DIR__ . '/..' . '/phpmv/ubiquity-dev/src/Ubiquity',
-            4 => __DIR__ . '/..' . '/phpmv/ubiquity-devtools/src',
-            5 => __DIR__ . '/..' . '/phpmv/ubiquity-webtools/src/Ubiquity',
+            0 => __DIR__ . '/..' . '/phpmv/ubiquity-attributes/src/Ubiquity',
+            1 => __DIR__ . '/..' . '/phpmv/ubiquity-commands/src/Ubiquity',
+            2 => __DIR__ . '/..' . '/phpmv/ubiquity-dev/src/Ubiquity',
+            3 => __DIR__ . '/..' . '/phpmv/ubiquity-devtools/src',
+            4 => __DIR__ . '/..' . '/phpmv/ubiquity-webtools/src/Ubiquity',
+            5 => __DIR__ . '/..' . '/phpmv/ubiquity/src/Ubiquity',
         ),
         'Twig\\' => 
         array (
@@ -103,10 +103,10 @@ class ComposerStaticInit783aac61824818e41610badcaf272953
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit783aac61824818e41610badcaf272953::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit783aac61824818e41610badcaf272953::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit783aac61824818e41610badcaf272953::$fallbackDirsPsr4;
-            $loader->classMap = ComposerStaticInit783aac61824818e41610badcaf272953::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb5984e08e0f6232bba98120ab7a707be::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb5984e08e0f6232bba98120ab7a707be::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitb5984e08e0f6232bba98120ab7a707be::$fallbackDirsPsr4;
+            $loader->classMap = ComposerStaticInitb5984e08e0f6232bba98120ab7a707be::$classMap;
 
         }, null, ClassLoader::class);
     }

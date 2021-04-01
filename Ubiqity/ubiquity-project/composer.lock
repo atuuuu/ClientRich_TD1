@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "679a35b8e5fab5aa32fc53790b1a096d",
+    "content-hash": "76cc167ef000c7ed8375fe783b12a111",
     "packages": [
         {
             "name": "phpmv/ubiquity",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity.git",
-                "reference": "a169616c2706a43c10a7414769c59cc66c5beff4"
+                "reference": "580652aaadb93fefc1295a9cbc6f5b73c2fd0fff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/a169616c2706a43c10a7414769c59cc66c5beff4",
-                "reference": "a169616c2706a43c10a7414769c59cc66c5beff4",
+                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/580652aaadb93fefc1295a9cbc6f5b73c2fd0fff",
+                "reference": "580652aaadb93fefc1295a9cbc6f5b73c2fd0fff",
                 "shasum": ""
             },
             "require": {
@@ -63,7 +63,7 @@
                 "issues": "https://github.com/phpMv/ubiquity/issues",
                 "source": "https://github.com/phpMv/ubiquity/tree/master"
             },
-            "time": "2021-03-25T01:52:27+00:00"
+            "time": "2021-03-30T13:44:54+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -675,16 +675,16 @@
         },
         {
             "name": "phpmv/ubiquity-webtools",
-            "version": "2.4.6",
+            "version": "2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity-webtools.git",
-                "reference": "33d22a071cc2d2b4d47e99cf4be6e71aad5d4a45"
+                "reference": "0b56462d0b3cc369c6540e18f00233c610972cdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity-webtools/zipball/33d22a071cc2d2b4d47e99cf4be6e71aad5d4a45",
-                "reference": "33d22a071cc2d2b4d47e99cf4be6e71aad5d4a45",
+                "url": "https://api.github.com/repos/phpMv/ubiquity-webtools/zipball/0b56462d0b3cc369c6540e18f00233c610972cdc",
+                "reference": "0b56462d0b3cc369c6540e18f00233c610972cdc",
                 "shasum": ""
             },
             "require": {
@@ -725,9 +725,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpMv/ubiquity-webtools/issues",
-                "source": "https://github.com/phpMv/ubiquity-webtools/tree/2.4.6"
+                "source": "https://github.com/phpMv/ubiquity-webtools/tree/2.4.7"
             },
-            "time": "2021-03-07T11:59:53+00:00"
+            "time": "2021-03-28T21:19:16+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -883,7 +883,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.0"
+        "php": ">=7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
