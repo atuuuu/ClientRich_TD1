@@ -12,7 +12,6 @@ export default class SectionsAddProductRoute extends Abstractroute {
     this.secId = parent.secId;
     model = this.store.peekRecord('section', parent.secId);
     this.outletName = model.name;
-    console.log(this.outletName);
     return model;
   }
 
@@ -23,7 +22,6 @@ export default class SectionsAddProductRoute extends Abstractroute {
   @action
   saveProduct(nom, prix, image, desc) {
     if(nom && prix && desc) {
-      console.log(nom + ' ' + prix + ' ' + image + ' ' + desc + ' ' + this.secId);
 
       var prod = this.store.createRecord('product', {
         name: nom,

@@ -10,9 +10,6 @@ export default class SectionsEditRoute extends Abstractroute {
   model(params) {
     this.secId = params.section_id;
     this.products = this.store.peekAll('product');  //Possible car ils sont récupérés à l'ouverture de la page section
-    this.products.forEach(function(val) {
-      console.log(val.name);
-    })
     this.name = this.store.peekRecord('section', this.secId).name;
     return this;
   }
@@ -26,7 +23,6 @@ export default class SectionsEditRoute extends Abstractroute {
   }
 
   @action rename(nouvNom){
-    console.log(nouvNom);
     this.store.findRecord('section', this.secId).then(function(section) {
       section.set('name', nouvNom);
       section.save();
@@ -36,10 +32,8 @@ export default class SectionsEditRoute extends Abstractroute {
 
   @action
   addProduct(id) {
-    console.log("id : " + id)
     let tmp = this;
     this.transitionTo('sections').then(function() {
-      console.log("id : " + id);
       tmp.transitionTo('sections.edit.addProduct', id);
     });
   }

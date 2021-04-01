@@ -1,5 +1,5 @@
-<div class="ui card" style="margin: 5%; height: min-content" {{action 'editProduct' @model @secId @prod.id}}>
-  <div class="image" style="height: 220px; position: static">
+<div class="ui card" style="margin: 5%; height: min-content">
+  <div class="image" style="height: 220px; position: static" {{action 'editProduct' @model @secId @prod.id}}>
     {{#if @prod.image}}
       <img class="" height="220px" src={{@prod.image}}>
     {{else}}
@@ -8,8 +8,9 @@
     {{/if}}
   </div>
 
-  <div class="content" style="background-color: white">
+  <div class="content" style="background-color: white" {{action 'editProduct' @model @secId @prod.id}}>
     <a class="header">{{@prod.name}}</a>
     <div class="description">{{@prod.price}}€</div>
   </div>
+  {{outlet @prod.id}}
 </div>

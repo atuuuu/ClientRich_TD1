@@ -24,7 +24,7 @@ export default class SectionsDeleteRoute extends Abstractroute {
         val.save();
       });
     }).then(function() {
-      new Promise(r => setTimeout(r, 500)).then(function() {
+      new Promise(r => setTimeout(r, 1)).then(function() {  //Sécurité (ça marche pas sans)
         section.deleteRecord();
         section.save();
       });

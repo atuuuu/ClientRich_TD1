@@ -1,0 +1,28 @@
+{{page-title "Edit"}}
+<form class="ui form" style="padding: 5px;">
+  <h4 class="ui dividing header">Modifier le produit</h4>
+  <div class="field">
+    <div class="two fields">
+      <div class="field column">
+        <label>Nom
+          {{input value=newName type="text" placeholder="Nouveau nom"}}
+        </label>
+      </div>
+      <div class="field column">
+        <label>Prix
+          {{input value=newPrice type="number" placeholder="0.0"}}
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Description
+      {{input type="text" value=nouvDesc placeholder="Nouvelle description" style="height: 50px;"}}
+    </label>
+  </div>
+  <div class="ui button green" tabindex="0" {{action "saveProduct" newName newPrice nouvDesc}}>Enregistrer</div>
+  <LinkTo @route="sections.edit.edit.delete" @model={{@model}}>
+    <div class="ui button red" tabindex="0">Supprimer</div>
+  </LinkTo>
+  {{outlet}}
+</form>

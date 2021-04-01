@@ -12,7 +12,7 @@
   {{#each @model.products as |prod|}}
     {{#if (is-valid prod.section.id @model.secId)}}
       <div class="row">
-        <Product-view @prod={{prod}} @model="{{@model}} @secId={{@model.secId}}"></Product-view>
+        <Product-view @prod={{prod}} @model={{@model}} @secId={{@model.secId}}></Product-view>
       </div>
     {{/if}}
   {{/each}}
