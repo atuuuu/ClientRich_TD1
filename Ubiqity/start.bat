@@ -1,4 +1,4 @@
 start ember serve
 cd Ubiqity
-cd ubiquity-project
+cd store-api
 vendor\bin\Ubiquity serve -p=8091

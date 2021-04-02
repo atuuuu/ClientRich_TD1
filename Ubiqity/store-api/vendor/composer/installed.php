@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8846fb969e74ea7b1391b72eea47f63269acb1ce',
+    'reference' => 'efea385748449ee27ae8aeba43b6b492bcba85fe',
     'name' => 'phpmv/ubiquity-project',
   ),
   'versions' => 
@@ -37,7 +37,7 @@
       array (
         0 => '2.4.x-dev',
       ),
-      'reference' => '580652aaadb93fefc1295a9cbc6f5b73c2fd0fff',
+      'reference' => 'c263d6742b4b10bbbbc6695cefde301dc5548682',
     ),
     'phpmv/ubiquity-attributes' => 
     array (
@@ -91,7 +91,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8846fb969e74ea7b1391b72eea47f63269acb1ce',
+      'reference' => 'efea385748449ee27ae8aeba43b6b492bcba85fe',
     ),
     'phpmv/ubiquity-webtools' => 
     array (

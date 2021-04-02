@@ -13,59 +13,57 @@ use Ubiquity\attributes\items\JoinTable;
 
 #[Table(name: "product")]
 class Product{
-
+	
 	#[Id()]
 	#[Column(name: "id",dbType: "int(11)")]
 	#[Validator(type: "id",constraints: ["autoinc"=>true])]
 	private $id;
 
-
+	
 	#[Column(name: "name",dbType: "varchar(60)")]
 	#[Validator(type: "length",constraints: ["max"=>60,"notNull"=>true])]
 	private $name;
 
-
+	
 	#[Column(name: "comments",nullable: true,dbType: "text")]
 	private $comments;
 
-
+	
 	#[Column(name: "stock",dbType: "int(11)")]
 	#[Validator(type: "notNull",constraints: [])]
 	private $stock;
 
-
+	
 	#[Column(name: "image",nullable: true,dbType: "text")]
 	private $image;
 
-
-	#[Column(name: "price",dbType: "decimal(6,2)")]
-	#[Validator(type: "notNull",constraints: [])]
+	
+	#[Column(name: "price",nullable: true,dbType: "decimal(6,2)")]
 	private $price;
 
-
-	#[Column(name: "promotion",dbType: "decimal(6,2)")]
-	#[Validator(type: "notNull",constraints: [])]
+	
+	#[Column(name: "promotion",nullable: true,dbType: "decimal(6,2)")]
 	private $promotion;
 
-
+	
 	#[OneToMany(mappedBy: "product",className: "models\\Basketdetail")]
 	private $basketdetails;
 
-
+	
 	#[OneToMany(mappedBy: "product",className: "models\\Orderdetail")]
 	private $orderdetails;
 
-
+	
 	#[ManyToOne()]
 	#[JoinColumn(className: "models\\Section",name: "idSection")]
 	private $section;
 
-
+	
 	#[ManyToMany(targetEntity: "models\\Product",inversedBy: "associatedproducts")]
 	#[JoinTable(name: "associatedproduct",inverseJoinColumns: ["name"=>"idAssoProduct","referencedColumnName"=>"id"])]
 	private $associatedproducts;
 
-
+	
 	#[ManyToMany(targetEntity: "models\\Product",inversedBy: "packs")]
 	#[JoinTable(name: "pack",joinColumns: ["name"=>"idPack","referencedColumnName"=>"id"])]
 	private $packs;
@@ -110,11 +108,11 @@ class Product{
 		$this->image=$image;
 	}
 
-	public function getprice(){
+	public function getPrice(){
 		return $this->price;
 	}
 
-	public function setprice($price){
+	public function setPrice($price){
 		$this->price=$price;
 	}
 
@@ -183,7 +181,7 @@ class Product{
 	}
 
 	 public function __toString(){
-		return ($this->promotion??'no value').'';
+		return ($this->stock??'no value').'';
 	}
 
 }

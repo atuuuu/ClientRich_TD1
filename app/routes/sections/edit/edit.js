@@ -4,9 +4,12 @@ import Abstractroute from "../../Abstractroute";
 
 export default class SectionEditRoute extends Abstractroute {
   prodId;
+  produit;
+  secId;
 
   model(params) {
     this.prodId = params.product_id;
+    this.produit = this.store.findRecord("product", this.prodId, { reload: true} );
     return this;
   }
 
@@ -15,19 +18,12 @@ export default class SectionEditRoute extends Abstractroute {
   }
 
   @action
-  saveProduct(newName, newPrice, newDesc) {
-    console.log(newName + " " + newPrice + " " + newDesc);
-    this.store.findRecord("product", this.prodId, { reload: true} ).then(function(prod) {
-      if (newName) {
-        prod.set("name", newName);
-      }
-      if (newPrice) {
-        prod.set("price", newPrice);
-      }
-      if (newDesc) {
-        prod.set("comments", newDesc);
-      }
+  saveProduct() {
+    let tmp = this;
+    this.produit.then(function(prod) {
+      tmp.secId = prod.section.get('id');
       prod.save();
+      tmp.transitionTo('sections.edit', tmp.secId);
     });
   }
 }
