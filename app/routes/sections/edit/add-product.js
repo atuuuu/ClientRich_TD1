@@ -36,6 +36,10 @@ export default class SectionsAddProductRoute extends Abstractroute {
 
       prod.save();
       this.cancel();
+    } else {
+      if(!nom) {
+        document.getElementById('')
+      }
     }
   }
 

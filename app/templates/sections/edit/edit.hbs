@@ -14,13 +14,13 @@
     </div>
     <div class="field column">
       <label>Image
-        {{input value=@model.produit.image type="text" placeholder="0.0"}}
+        {{input value=@model.produit.image type="text" placeholder="https://www.monimage.png"}}
       </label>
     </div>
   </div>
   <div class="field">
     <label>Description
-      {{input type="text" value=@model.produit.comments placeholder="Nouvelle description" style="height: 50px;"}}
+      {{textarea value=@model.produit.comments placeholder="Nouvelle description" rows=1}}
     </label>
   </div>
 

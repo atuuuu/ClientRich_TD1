@@ -31,7 +31,7 @@ export default class IndexRoute extends Abstractroute {
 
   @action
   openCommandes() {
-    this.transitionTo('orders');
+    this.transitionTo('my-orders');
   }
 
   @action

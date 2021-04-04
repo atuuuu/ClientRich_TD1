@@ -5,20 +5,20 @@
     <div class="three fields">
       <div class="field">
         <label>Nom*</label>
-        {{input type="text" placeholder="nom" value=nom}}
+        {{input type="text" placeholder="nom" value=nom id="nom"}}
       </div>
       <div class="field">
         <label>price*</label>
-        {{input type="number" placeholder="price" value=price}}
+        {{input type="number" placeholder="price" value=price id="price"}}
       </div>
       <div class="field">
         <label>Image</label>
-        {{input type="text" placeholder="url" value=image}}
+        {{input type="text" placeholder="url" value=image id="image"}}
       </div>
     </div>
     <div class="field">
       <label>Description*</label>
-      {{textarea rows="2" value=desc}}
+      {{textarea rows="2" value=desc id="comments"}}
     </div>
 
     <UiDropdown class="selection multiple" @selected={{@model.product.packs}} @onChange={{fn (mut @model.product.packs)}} as |execute mapper|>

@@ -33,11 +33,13 @@
 </div>
 
 <div style="width: max-content; margin: auto; display: block; opacity: 75%;" class="ui menu">
-  <h2 class="headText" style="font-size: 24px;">Mes commandes</h2>
+  <LinkTo @route="myOrders">
+    <h2 class="headText" style="font-size: 24px;">Mes commandes</h2>
+  </LinkTo>
 
   {{#each @model.orders as |com|}}
-      <LinkTo @route="orders.id" @model={{com.id}} style="margin: 1%;">
-    <div class="ui relaxed divided list segment inverted green">
+    <LinkTo @route="myOrders.id" @model={{com.id}} style="margin: 1%;">
+      <div class="ui relaxed divided list segment inverted green">
         <div class="item">
           <i class="large shopping cart icon black"></i>
           <div class="content">
@@ -45,8 +47,8 @@
             <a class="header">Reste {{com.count}} produit(s)</a>
           </div>
         </div>
-    </div>
-      </LinkTo>
+      </div>
+    </LinkTo>
   {{/each}}
 </div>
 {{outlet}}
