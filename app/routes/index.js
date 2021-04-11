@@ -9,6 +9,7 @@ export default class IndexRoute extends Abstractroute {
   model() {
     let user = this.userAuth.user;
     if (user) {
+      this.store.findAll('orderdetail');  //Pour le nombre de produit dans les commandes
       return RSVP.hash({
         orders: this.store.query('order', {
           filter: { idEmployee: user.id },

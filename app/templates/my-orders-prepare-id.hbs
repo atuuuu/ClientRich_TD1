@@ -1,0 +1,57 @@
+{{page-title "Id"}}
+
+<div style="width: 100%; display: flex; flex-flow: column nowrap;">
+  <h1 class="header headText" style="font-size: 32px;">Commande {{@model.data.user.id}} </h1>
+  <div style="width: 100%; display: flex; flex-flow: row nowrap;">
+
+    <!-- Info client-->
+    <div class="ui white card" style="margin: 1% 5% 0 auto; width: max-content; opacity: 80%;">
+      <p style="margin-top: -1%; margin-right: auto; font-size: 20px;" class="headText">Client</p>
+      <div class="item d-inline-flex row" style="font-size: 16px; display: flex; flex-direction: column">
+        <div class="content" style="padding: 10px;">
+          <p class="description">Passée par : {{@model.data.user.name}}</p>
+          <p class="description">Mail : {{@model.data.user.email}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info commande-->
+    <div class="ui white card" style="margin: 1% auto 0 5%; width: max-content; opacity: 80%;">
+      <p style="margin-top: -1%; margin-right: auto; font-size: 20px;" class="headText">Commande</p>
+      <div class="item d-inline-flex row" style="font-size: 16px;">
+        <div class="content" style="padding: 10px;">
+          <div class="description">Total : {{@model.data.amount}}€</div>
+          <div class="description">Reste à payer : {{@model.data.toPay}}€</div>
+          <div class="description">Nombre de produit : {{@model.data.count}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div style="width: 100%; display: flex; flex-flow: row nowrap;">
+    <!-- Info commande-->
+    <div class="ui white card" style="margin: 1% auto 0 auto; width: max-content; opacity: 80%;">
+      <p style="margin-top: -1%; margin-right: auto; font-size: 20px;" class="headText">À préparer</p>
+      <div class="ui list-group-item row">
+        {{#each @model.data.products as |detail|}}
+          <div class="ui checkbox">
+            <label>
+              {{input type="checkbox" name="example" class="header"}}
+              {{detail.name}}
+            </label>
+          </div>
+        {{/each}}
+      </div>
+
+      <div class="item d-inline-flex row" style="font-size: 16px;">
+        <div class="content" style="padding: 10px;">
+          <div class="description">Nom du produit : {{@model.data.amount}}€</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

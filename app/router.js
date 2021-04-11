@@ -25,7 +25,6 @@ Router.map(function () {
   this.route('products', function() {
     this.route('add');
   });
-  this.route('myOrders', function() {
-    this.route('id', { path : 'prepare/:order_id' })
-  });
+  this.route('myOrders');
+  this.route('myOrdersPrepareId', { path : 'myOrders/prepare/:order_id' });
 });

@@ -1,2 +1,20 @@
 {{page-title "Orders"}}
+
+<h1 class="headText" style="font-size: 18px; margin-top: 1%;">Mes commandes</h1>
+<div class="ui middle aligned divided list">
+  {{#each @model.orders as |commande|}}
+  <LinkTo @route="myOrdersPrepareId" @model={{commande.id}} style="margin: 1%; color: initial">
+    <div class="ui segment float-left" style="text-align: left; background-color: seagreen;">
+      <div class="content" style="display:flex; flex-flow: row nowrap;">
+        <i class="tag icon blue"></i>
+        <div>
+          <p>Commande du {{moment-format commande.dateCreation 'LLLL'}}</p>
+          <p>Passée par {{commande.user.name}}</p>
+          <p>Pour le {{moment-format commande.timeslot.slotDate 'LLLL'}}</p>
+        </div>
+      </div>
+    </div>
+  </LinkTo>
+  {{/each}}
+</div>
 {{outlet}}

@@ -9,8 +9,8 @@ export default class OrderModel extends Model {
   @attr ('number') toPay;
   @attr ('number') itemsNumber;
   @attr ('number') missingNumber;
+  @belongsTo('timeSlot') timeslot;
   @hasMany ('orderdetail') details;
-  @belongsTo ('timeSlot') idTimeSlot;
   @belongsTo ('employee') employee;
   @belongsTo ('user') user;
 

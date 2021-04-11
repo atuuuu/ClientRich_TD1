@@ -1,7 +1,8 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { attr, belongsTo } from '@ember-data/model';
 
 export default class TimeSlotModel extends Model {
-  @attr('datetime') slotDate;
-  @attr('bool') full;
-  @attr('bool') expired;
+  @attr('date') slotDate;
+  @attr('boolean') full;
+  @attr('boolean') expired;
+  @belongsTo('order') order;
 }
