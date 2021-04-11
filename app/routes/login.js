@@ -7,6 +7,11 @@ export default class LoginRoute extends Route {
   @service userAuth;
   store;
 
+  model() {
+    if(this.userAuth.isAuth)
+      this.transitionTo('index');
+  }
+
   @action
   login(mail, pass) {
     let self = this;
